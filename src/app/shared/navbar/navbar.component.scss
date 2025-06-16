@@ -1,0 +1,99 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  border-block-end: 1px solid var(--neutral-300);
+  position: relative;
+  z-index: 10;
+  .menu-icon {
+    cursor: pointer;
+    gap: 24px;
+    img{
+      inline-size: 22px;
+      block-size: 25px;
+      &:hover{
+      filter: brightness(0) saturate(100%) invert(49%) sepia(98%) saturate(4054%) hue-rotate(214deg) brightness(107%) contrast(99%);         
+
+      }
+      }
+    .menu-action{
+      gap:18px;
+    
+      .btn-add{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0;
+        inline-size: 2rem;
+        block-size: 2rem;
+        border-radius: 100%;
+        &:hover{
+          background-color: var(--primary-50);
+         img{ 
+          filter: brightness(0) saturate(100%) invert(49%) sepia(98%) saturate(4054%) hue-rotate(214deg) brightness(107%) contrast(99%);         }
+        }
+        img{
+          inline-size: 20px;
+          block-size: 25px;
+
+        }
+      }
+      .text{
+         font-family: "Rubik-Regular";
+         font-size: 20px;
+      }
+    }
+  }
+  .social-box{
+    .btn{
+      
+      img{
+        cursor: pointer;
+        &:hover{
+          filter:brightness(0) saturate(100%) invert(50%) sepia(77%) saturate(4090%) hue-rotate(211deg) brightness(102%) contrast(101%);
+        }
+  
+      }
+      .dot{
+        position: absolute;
+        &::before{
+          content: "";
+          inset-inline-start: -15px;
+          inline-size: 0.6rem;
+          block-size: 0.6rem;
+          border-radius: 50%;
+          background-color: var(--neutral-50);
+          position: relative;
+          inset-block-start: 0.25em;
+          display: block;
+          }
+        &::after{
+            content: "";
+            left: -14px;
+            inline-size: 0.5rem;
+            block-size: 0.5rem;
+            border-radius: 50%;
+            position: absolute;
+            inset-block-start: 0.3em;
+            inset-block-end: unset;
+        }
+        &.notification-dot::after{
+          background-color: #6DD230;
+        }
+        &.messages-dot::after{
+          background-color: #FE4D97;
+        }
+      }
+    }
+  }
+  .profile-box{
+    .profile-box-header{
+      img{
+        inline-size: 36px;
+        block-size: 36px;
+        border-radius: 100vh;
+      }
+    }
+  }
+}

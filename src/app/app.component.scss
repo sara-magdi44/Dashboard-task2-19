@@ -1,0 +1,10 @@
+.system-container {
+  display: flex;
+  min-height: 100vh;
+  .system-content {
+    width: 100%;
+    .content{
+      background-color: var(--neutral-200);
+    }
+  }
+}

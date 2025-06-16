@@ -1,0 +1,90 @@
+.sidebar {
+  background-color: var(--neutral-50);
+  min-block-size: 100vh;
+  border-inline-end: 1px solid var( --neutral-300);
+  min-inline-size: 88px;
+  transition: all 0.5s ease-in-out;
+  .logo-box {
+    block-size: 70px;
+    display: grid;
+    place-content: center;
+    .small-logo {
+      display: block;
+    }
+    .min-logo {
+      display: none;
+    }
+  }
+  &.open {
+    inline-size: 240px;
+    .logo-box {
+      .small-logo {
+        display: none;
+      }
+      .min-logo {
+        display: block;
+      }
+    }
+    .links-list {
+      ul {
+        li {
+          display: block;
+          a {
+            inline-size: 100%;
+            font-family: "Rubik-Regular";
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+   
+  }
+
+  .links-list {
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        margin: 0 0 12px;
+        transition: all 0.3s ease;
+        a {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+          padding: 11px 30px;
+          inline-size: 100%;
+          font-size: 14px;
+          color: var(--neutral-400);
+          transition: all 0.2s ease-in-out;
+          &.active {
+            font-family: "Rubik-medium";
+            background-color: var(--neutral-200);
+            border-inline-start: 3px solid var(--primary);
+            img {
+              filter: brightness(0) saturate(100%) invert(50%) sepia(77%) saturate(4090%) hue-rotate(211deg) brightness(102%) contrast(101%);
+            }
+          }
+          &:hover:not(.active){
+            transform: translateX(2px);
+            inline-size: 95%;
+            background-color: var(--neutral-200);
+            border-inline-start: 3px solid var(--primary);
+              img {
+              filter: brightness(0) saturate(100%) invert(50%) sepia(77%) saturate(4090%) hue-rotate(211deg) brightness(102%) contrast(101%);
+            }
+          }
+          img {
+            inline-size: 20px;
+            block-size: 20px;
+          }
+          .text {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+ 
+}

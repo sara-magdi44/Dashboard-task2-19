@@ -1,0 +1,36 @@
+.search-group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  max-inline-size: 190px;
+}
+
+.input {
+  max-inline-size: 250px;
+  block-size: 45px;
+  padding-inline-start: 2.5rem;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: text;
+  font-family: "Rubik-Regular";
+  color: var(--neutral-400);
+  font-size: 14px;
+  &::placeholder {
+  font-family: "Rubik-Regular";
+  color: var(--neutral-350);
+  font-size: 14px;
+
+}
+}
+
+.search-icon {
+  position: absolute;
+  inset-inline-start: 1rem;
+  inset-block-start: 1rem;
+  inline-size: 1rem;
+  block-size: 1rem;
+  z-index: 1;
+  cursor: pointer;
+}

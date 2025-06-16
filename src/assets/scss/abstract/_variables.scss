@@ -1,0 +1,33 @@
+@use "sass:map";
+@use "sass:color";
+
+:root {
+    --neutral-50:   hsla(0,   0%,  100%, 1);
+    --neutral-100:  hsla(0,   0%,  95%,  1);
+    --neutral-200:  hsla(200, 27%, 98%,  1);
+    --neutral-300:  hsla(211, 19%, 92%,  1);
+    --neutral-350:   hsla(211, 21%, 67%, 1);
+    --neutral-400:  hsla(211, 19%, 55%,  1);
+    --neutral-500:  hsla(220, 14%, 12%,  1);
+    --primary:      hsla(224, 99%, 65%,  1);
+    --primary-50:  hsl(212, 100%, 97% , 1);
+    --color-img:brightness(0) saturate(100%) invert(55%) sepia(22%) saturate(379%) hue-rotate(170deg) brightness(95%) contrast(92%);;
+
+ }
+ 
+
+[data-img="svg"] {
+  filter: var(--color-img);
+}
+
+@mixin transition($time: 0.3) {
+  transition: #{$time}s all ease-in-out;
+}
+
+
+@mixin hover($trans) {
+  transition: #{$trans}s all ease-in-out;
+  &:hover {
+    @content;
+  }
+}

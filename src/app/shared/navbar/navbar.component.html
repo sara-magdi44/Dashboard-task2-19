@@ -1,0 +1,43 @@
+<div class="header-container">
+    <div class="menu-icon d-flex justify-content-center align-items-center" >
+        <img src="/assets/images/icon/menu.svg" alt="MenuIcon" data-img="svg"  (click)="openSidebar()"/>
+        <div class="menu-action d-none d-md-flex justify-content-center align-items-center">
+             <button class="btn btn-add ">
+                 <img src="/assets/images/icon/add.svg" alt="">
+            </button>
+            <h1 class="text">Dashboard</h1> 
+        </div>   
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center gap-4 ">
+        <div class="search-box">
+            <app-search class="d-none d-md-block"></app-search>
+        </div>
+        <div class="social-box d-flex flex-row align-items-center gap-2">
+            <div class="position-relative">
+                <button type="button" class="btn" (click)="toggleMessages()"  >
+                    <img src="/assets/images/icon/inbox.svg" alt="MessageIcon" data-img="svg">
+                    <span class="dot messages-dot"></span>
+                </button>
+                <app-downdrop [isOpen]="messagesOpen"></app-downdrop>
+            </div>
+            <div class="position-relative">
+                <button type="button" class="btn" (click)="toggleNotifications()">
+                    <img src="/assets/images/icon/notification.svg" alt="notificationIcon" data-img="svg">
+                    <span class="dot notification-dot"></span>
+                </button>
+                <app-downdrop [isOpen]="notificationsOpen"></app-downdrop>
+            </div>
+            <button type="button " class="btn d-none d-md-block">
+                <img src="/assets/images/icon/square.svg" alt="Icon" data-img="svg">
+            </button>
+        </div>
+        <div class="profile-box">
+            <div class="profile-box-header d-flex gap-2 align-items-center" >
+                <a href="">
+                   <img src="/assets/images/png/image.png" alt="UserImage" />         
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
