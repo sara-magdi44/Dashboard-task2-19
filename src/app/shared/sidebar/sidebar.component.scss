@@ -67,8 +67,7 @@
             }
           }
           &:hover:not(.active){
-            transform: translateX(2px);
-            inline-size: 95%;
+           
             background-color: var(--neutral-200);
             border-inline-start: 3px solid var(--primary);
               img {
