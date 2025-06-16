@@ -2,7 +2,8 @@
   position: relative;
   inset: 13px -6px auto auto !important;
   border: none;
-  padding: 0;
+    filter: drop-shadow(0px 13.62px 27.239px rgba(98,101,119,.2)) drop-shadow(0px -.681px 6.81px rgba(243,243,243,.05));
+  background: var(--neutral-50);
   &::after{
      content: "";
      position: absolute;
@@ -11,87 +12,88 @@
      border: 11px solid;
      border-color: transparent transparent var(--neutral-50) transparent;
        filter: drop-shadow(0px 13.62px 27.239px rgba(98,101,119,.2)) drop-shadow(0px -.681px 6.81px rgba(243,243,243,.05));
-
   }
-
-.downdrop-wrapper {
-  background: var(--neutral-50);
-  inline-size: 350px;
-  max-block-size: 400px;
-  filter: drop-shadow(0px 13.62px 27.239px rgba(98,101,119,.2)) drop-shadow(0px -.681px 6.81px rgba(243,243,243,.05));
-  padding: 10px;
+.dropdown-content{
+  padding: 0 0.6rem 2rem;
   font-family: "Rubik-Regular";
   overflow-y: scroll;
-  @media screen and (max-width: 576px) {
-    position: fixed;
-    inset-block-start: 61px;
-    inset-inline-end: 0;
-    inset-inline-end: 0;
-    max-inline-size: 100%;
-    max-block-size: 350px;
-
-  }
- 
-    .message-container {
-      padding: 10px;
-      .user-img{
-        inline-size: 30px;
-        block-size: 30px;
-      }
-      .content {
-        &.active {
+  inline-size: 350px;
+  max-block-size: 400px;
+  .downdrop-wrapper {
+    @media screen and (max-width: 576px) {
+      position: fixed;
+      inset-block-start: 61px;
+      inset-inline-end: 0;
+      inset-inline-end: 0;
+      max-inline-size: 100%;
+      max-block-size: 350px;
+  
+    }
+   
+      .message-container {
+        padding: 10px;
+        .user-img{
+          inline-size: 30px;
+          block-size: 30px;
+        }
+        .content {
+          &.active {
+            .user-name {
+              color: var(--primary);
+              font-size: 14px;
+            }
+            .message {
+              color: var(--neutral-400);
+            }
+          }
+          
           .user-name {
-            color: var(--primary);
+            color: var(--neutral-500);
             font-size: 14px;
           }
+          
           .message {
-            color: var(--neutral-400);
+            color: var(--neutral-350);
+            font-size: 13px;
+            inline-size: 255px;
+            block-size: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+  
+            @media screen and (max-width: 576px) {
+              inline-size: 200px;
+            }
           }
         }
         
-        .user-name {
-          color: var(--neutral-500);
-          font-size: 14px;
-        }
-        
-        .message {
-          color: var(--neutral-350);
-          font-size: 13px;
-          inline-size: 255px;
-          block-size: 20px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-
-          @media screen and (max-width: 576px) {
-            inline-size: 200px;
+        &:hover {
+          background-color: var(--primary-50);
+          .content {
+            .user-name {
+              color: var(--primary);
+            }
+            .message {
+              color: var(--neutral-400);
+            }
           }
         }
       }
-      
-      &:hover {
-        background-color: var(--primary-50);
-        .content {
-          .user-name {
-            color: var(--primary);
-          }
-          .message {
-            color: var(--neutral-400);
-          }
-        }
-      }
-    }
-     
-    .allMessages {
-      color: var(--primary);
-      font-size: 14px;
-      padding: 10px;
-      cursor: pointer;    
-      &:hover {
-        background-color: var(--primary-50);
-        color: var(--primary);
-        border-radius: 8px;
-      }   
+       
+  
     }
   }
+  .allMessages {
+        color: var(--primary);
+        background-color: var(--neutral-50);
+        font-size: 14px;
+        padding: 10px;
+        cursor: pointer;    
+        width: 100%;
+        &:hover {
+          background-color: var(--primary-50);
+          color: var(--primary);
+          border-radius: 8px;
+        }   
+      }
 } 

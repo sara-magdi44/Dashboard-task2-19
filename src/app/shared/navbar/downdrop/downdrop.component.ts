@@ -20,7 +20,6 @@ export class DowndropComponent {
     { userImage: '/assets/images/png/image5.png', userName: 'Barry Armstrong', message: 'I have been questioned many people how to make this call call me when you are on ', status: 'read' },
     { userImage: '/assets/images/png/image5.png', userName: 'Barry Armstrong', message: 'I have been questioned many people how to make this call call me when you are on ', status: 'read' },
 
-
   ];
 
  

@@ -58,18 +58,21 @@
           font-size: 14px;
           color: var(--neutral-400);
           transition: all 0.2s ease-in-out;
+          &:hover {
+            border-inline-start: 3px solid var(--primary);
+          }
           &.active {
+            border-inline-start: 3px solid var(--primary);
             font-family: "Rubik-medium";
             background-color: var(--neutral-200);
-            border-inline-start: 3px solid var(--primary);
+            
             img {
               filter: brightness(0) saturate(100%) invert(50%) sepia(77%) saturate(4090%) hue-rotate(211deg) brightness(102%) contrast(101%);
             }
           }
           &:hover:not(.active){
-           
+                     
             background-color: var(--neutral-200);
-            border-inline-start: 3px solid var(--primary);
               img {
               filter: brightness(0) saturate(100%) invert(50%) sepia(77%) saturate(4090%) hue-rotate(211deg) brightness(102%) contrast(101%);
             }
@@ -78,12 +81,44 @@
             inline-size: 20px;
             block-size: 20px;
           }
-          .text {
+
+          .text{
             display: none;
           }
         }
       }
     }
   }
- 
+&.close{
+
+
+      .links-list {
+      ul {
+        li {
+          a:hover {
+            transition: all 0.3s ease;
+            span {
+                  display: block;
+                   position: absolute;
+                   background-color: var(--neutral-500);
+                   color: var(--neutral-50);
+                   padding: 7px 12px;
+                   border-radius: 8px;
+                   font-size: 12px;
+                   left: 6rem;
+                   font-family: "Rubik-medium";
+                &::after{
+                  content: "";
+                  position: absolute;
+                  inset-block-end: 6px;
+                  inset-inline-start: -16px;
+                  border: 9px solid;
+                  border-color: transparent var(--neutral-500) transparent transparent;           
+                  }
+             }
+          }
+        }
+      }
+    }
+  }
 }

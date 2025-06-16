@@ -1,6 +1,6 @@
 <div class="dropdown-menu" > 
-            <div class="downdrop-wrapper">
-                <ul class="d-flex flex-column justify-content-center align-items-center gap-1">
+            <div class="dropdown-content">
+                <ul class=" downdrop-wrapper d-flex flex-column justify-content-center align-items-center gap-1">
                 @for(massege of messages ; track $index ){
                     <li class="message-container  ">
                      <a href="" class="d-flex gap-2 align-items-center" >
@@ -17,10 +17,10 @@
                     </li>
     
                 }
-                <li class="allMessages w-100 text-center">
-                    <a href="" class="d-block"> All Messages</a>
-                </li>
-    
-                </ul>
+                
+              </ul>
+            </div>
+            <div class="allMessages  text-center position-fixed bottom-0">
+                <a href="" > All Messages</a>
             </div>
 </div>

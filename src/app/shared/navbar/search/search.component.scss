@@ -1,19 +1,17 @@
 .search-group {
-     display: flex;
-    line-height: 28px;
-    max-inline-size: 250px;
-    border: 1px solid var(--neutral-300);
-    border-radius: 100vh;
-    padding: 7px 12px;
-.img-input{
-  inline-size: 30px;
-  block-size: 30px;
-}
-.input {
-  border: 0;
-  max-width: 170px;
+  position: relative;
+    .img-input{
+      inline-size: 30px;
+      block-size: 30px;
+      position: absolute;
+      left: 6px;
+    }
+    .input {
+  border-radius: 100vh;
+  padding-left: 2rem;
+  border: 1px solid var(--neutral-300);
+  max-width: 250px;
   background-color: transparent;
-  outline: none;
   transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
   cursor: text;
   font-family: "Rubik-Regular";

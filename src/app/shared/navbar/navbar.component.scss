@@ -12,6 +12,7 @@
     .menu-img {
       inline-size: 22px;
       block-size: 25px;
+      
       img:hover{
       filter: brightness(0) saturate(100%) invert(49%) sepia(98%) saturate(4054%) hue-rotate(214deg) brightness(107%) contrast(99%);         
 
@@ -27,16 +28,16 @@
         inline-size: 2rem;
         block-size: 2rem;
         border-radius: 100%;
+        inline-size: 20px;
+          block-size: 25px;
         &:hover{
           background-color: var(--primary-50);
          img{ 
           filter: brightness(0) saturate(100%) invert(49%) sepia(98%) saturate(4054%) hue-rotate(214deg) brightness(107%) contrast(99%);         }
         }
-        img{
-          inline-size: 20px;
-          block-size: 25px;
+        
+          
 
-        }
       }
       .text{
          font-family: "Rubik-Regular";

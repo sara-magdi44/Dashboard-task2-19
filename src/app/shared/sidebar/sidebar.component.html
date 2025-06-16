@@ -1,4 +1,4 @@
-<aside class="sidebar d-flex flex-column justify-content-center align-items-center" [class.open]="isActive">
+<aside class="sidebar d-flex flex-column justify-content-center align-items-center" [class.open]="isActive" [class.close] ="!isActive">
   <div class="sidebar-top-box w-100  flex-grow-1">
     <div class="logo-box">
       <a routerLink="/">
@@ -9,7 +9,7 @@
     <div class="links-list">
       <ul class="list-unstyled text-uppercase">
         <li>
-          <a href="" class="tooltip-container" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a href="" class="tooltip-container">
             <img src="/assets/images/icon/clock.svg" data-img="svg" alt="DashboardIcon">
             <span class="text ">
                 Dashboard
@@ -17,7 +17,7 @@
           </a>
         </li>
         <li>
-          <a href="" class="active" data-toggle="tooltip" data-placement="right" title="Projects">
+          <a href="" class="active" >
             <img src="/assets/images/icon/bag.svg" data-img="svg" alt="ProjectIcon">
             <span class="text ">
                 projects
@@ -25,7 +25,7 @@
           </a>
         </li>
         <li>
-          <a href="" tooltipClass="main-tooltip" placement="right" ngbTooltip="Tasks">
+          <a href="" >
             <img src="/assets/images/icon/check.svg" data-img="svg" alt="TaskIcon">
            <span class="text">
                 Tasks
@@ -33,7 +33,7 @@
           </a>
         </li>
          <li>
-          <a href="" data-toggle="tooltip" data-placement="right" title="Kanban Desk">
+          <a href="" >
             <img src="/assets/images/icon/square.svg" data-img="svg" alt="KanbanDeskIcon">
             <span class="text ">
                 kanban desk
@@ -41,7 +41,7 @@
           </a>
         </li>
          <li>
-          <a href="" data-toggle="tooltip" data-placement="right" title="Calendar">
+          <a href="" >
             <img src="/assets/images/icon/calendar.svg" data-img="svg" alt="CalendarIcon">
             <span class="text">
                Calendar
@@ -49,7 +49,7 @@
           </a>
         </li>
          <li>
-          <a href="" data-toggle="tooltip" data-placement="right" title=" Contacts">
+          <a href="" >
             <img src="/assets/images/icon/contact.svg" data-img="svg" alt="ContactIcon">
             <span class="text">
                Contacts
@@ -57,7 +57,7 @@
           </a>
         </li>
          <li>
-          <a href="" data-toggle="tooltip" data-placement="right" title="UI Kit">
+          <a href="" >
             <img src="/assets/images/icon/uikit.svg" data-img="svg" alt="UIKitIcon">
             <span class="text">
                UI Kit
