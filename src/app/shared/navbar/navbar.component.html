@@ -1,9 +1,11 @@
 <div class="header-container">
     <div class="menu-icon d-flex justify-content-center align-items-center" >
-        <img src="/assets/images/icon/menu.svg" alt="MenuIcon" data-img="svg"  (click)="openSidebar()"/>
+        <div class="menu-img">
+         <img src="/assets/images/icon/menu.svg" alt="MenuIcon" data-img="svg"  (click)="openSidebar()"/>
+        </div>
         <div class="menu-action d-none d-md-flex justify-content-center align-items-center">
              <button class="btn btn-add ">
-                 <img src="/assets/images/icon/add.svg" alt="">
+                 <img src="/assets/images/icon/add.svg" alt="" class="img-fluid" >
             </button>
             <h1 class="text">Dashboard</h1> 
         </div>   
@@ -14,23 +16,30 @@
             <app-search class="d-none d-md-block"></app-search>
         </div>
         <div class="social-box d-flex flex-row align-items-center gap-2">
-            <div class="position-relative">
-                <button type="button" class="btn" (click)="toggleMessages()"  >
-                    <img src="/assets/images/icon/inbox.svg" alt="MessageIcon" data-img="svg">
+               <div class="dropdown">
+                 <button type="button" class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"  >
+                   <div class="img-content">
+                     <img src="/assets/images/icon/inbox.svg" class="img-fluid" alt="MessageIcon" data-img="svg">
                     <span class="dot messages-dot"></span>
+                   </div>
+                </button>                
+                <app-downdrop ></app-downdrop>
+               </div>
+                <div class="dropdown">
+                    <button type="button" class="btn"data-bs-toggle="dropdown" aria-expanded="false" >
+                    <div class="img-content">
+                        <img src="/assets/images/icon/notification.svg" class="img-fluid"  alt="notificationIcon" data-img="svg">
+                        <span class="dot notification-dot"></span>
+                     </div>
+                    </button>
+                    <app-downdrop ></app-downdrop>
+                </div>
+
+                <button type="button " class="btn d-none d-md-block">
+                    <div class="img-content">
+                        <img src="/assets/images/icon/square.svg"  class="img-fluid" alt="Icon" data-img="svg">
+                    </div>
                 </button>
-                <app-downdrop [isOpen]="messagesOpen"></app-downdrop>
-            </div>
-            <div class="position-relative">
-                <button type="button" class="btn" (click)="toggleNotifications()">
-                    <img src="/assets/images/icon/notification.svg" alt="notificationIcon" data-img="svg">
-                    <span class="dot notification-dot"></span>
-                </button>
-                <app-downdrop [isOpen]="notificationsOpen"></app-downdrop>
-            </div>
-            <button type="button " class="btn d-none d-md-block">
-                <img src="/assets/images/icon/square.svg" alt="Icon" data-img="svg">
-            </button>
         </div>
         <div class="profile-box">
             <div class="profile-box-header d-flex gap-2 align-items-center" >

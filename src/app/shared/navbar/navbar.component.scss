@@ -9,17 +9,16 @@
   .menu-icon {
     cursor: pointer;
     gap: 24px;
-    img{
+    .menu-img {
       inline-size: 22px;
       block-size: 25px;
-      &:hover{
+      img:hover{
       filter: brightness(0) saturate(100%) invert(49%) sepia(98%) saturate(4054%) hue-rotate(214deg) brightness(107%) contrast(99%);         
 
       }
       }
     .menu-action{
       gap:18px;
-    
       .btn-add{
         display: flex;
         align-items: center;
@@ -48,9 +47,11 @@
   .social-box{
     .btn{
       
-      img{
+      .img-content{
+        inline-size: 30px;
+        block-size: 30px;
         cursor: pointer;
-        &:hover{
+        img:hover{
           filter:brightness(0) saturate(100%) invert(50%) sepia(77%) saturate(4090%) hue-rotate(211deg) brightness(102%) contrast(101%);
         }
   

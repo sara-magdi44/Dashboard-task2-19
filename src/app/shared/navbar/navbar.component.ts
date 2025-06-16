@@ -18,30 +18,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 export class NavbarComponent {
  @Output() triggerAction = new EventEmitter<void>();
 
-  messagesOpen: boolean = false;
-  notificationsOpen: boolean = false;
-
-  toggleMessages() {
-    this.messagesOpen = !this.messagesOpen;
-    this.notificationsOpen = false;
-  }
-
-  toggleNotifications() {
-    this.notificationsOpen = !this.notificationsOpen;
-    this.messagesOpen = false; 
-  }
 
   openSidebar() {
     this.triggerAction.emit();
   }
-   constructor( private elRef : ElementRef){}
-  @HostListener('document:click', ['$event.target'])
-  onClickOutside(target: HTMLElement) {
-    const clickedInside = this.elRef.nativeElement.contains(target);
-    if (!clickedInside) {
-      this.messagesOpen = false;
-      this.notificationsOpen = false;
-    }
-  }
+
 
 }

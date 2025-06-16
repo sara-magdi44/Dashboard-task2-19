@@ -1,27 +1,26 @@
-@if(isOpen){
-    <div class="dropdown-menu  d-block" > 
-    <div class="notification-container " >
-        <ul class="d-flex flex-column justify-content-center align-items-center gap-1">
-            @for(massege of messages ; track $index ){
-                <li class="message-container  ">
-                 <a href="" class="d-flex gap-2 align-items-center" >
-                     <img  src= "{{massege.userImage}}" alt="User Image" class="user-img">
-                    <div class="content d-felx justify-content-between align-items-start"
-                    [ngClass]="{'active': massege.status === 'new'}">
-
-                      <h2 class="user-name">{{massege.userName}}</h2>
-                      <p class="message">{{massege.message}}</p>
-                    </div>
-                 </a>
+<div class="dropdown-menu" > 
+            <div class="downdrop-wrapper">
+                <ul class="d-flex flex-column justify-content-center align-items-center gap-1">
+                @for(massege of messages ; track $index ){
+                    <li class="message-container  ">
+                     <a href="" class="d-flex gap-2 align-items-center" >
+                       <div class="user-img">
+                          <img  src= "{{massege.userImage}}" alt="User Image" class="img-fluid">
+                       </div>
+                        <div class="content d-felx justify-content-between align-items-start"
+                        [ngClass]="{'active': massege.status === 'new'}">
+    
+                          <h2 class="user-name">{{massege.userName}}</h2>
+                          <p class="message">{{massege.message}}</p>
+                        </div>
+                     </a>
+                    </li>
+    
+                }
+                <li class="allMessages w-100 text-center">
+                    <a href="" class="d-block"> All Messages</a>
                 </li>
-
-            }
-            <li class="allMessages w-100 text-center">
-                <a href="" class="d-block"> All Messages</a>
-            </li>
-
-        </ul>
-      </div>
-    </div>
-
-}
+    
+                </ul>
+            </div>
+</div>

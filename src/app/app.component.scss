@@ -4,7 +4,10 @@
   .system-content {
     width: 100%;
     .content{
+      padding: 10px;
       background-color: var(--neutral-200);
+      height: calc(100vh - 600px);
+      overflow-y: scroll;
     }
   }
 }
